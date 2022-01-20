@@ -67,7 +67,29 @@ func main() {
 	*/
 
 	//Example7: Slicing and apending an array
-	nums := []float64{20, 34, 45, 56, 67, 77, 89, 98, 76, 32}
-	two := append(nums, 500, 100, 200)
-	fmt.Println(nums, two)
+	/*	nums := []float64{20, 34, 45, 56, 67, 77, 89, 98, 76, 32}
+		two := append(nums, 500, 100, 200)
+		fmt.Println(nums, two)
+	*/
+
+	//Example8:Using the Slice function suing the MAKE keyword in an array:
+	/*	numbe:= []int{2,4,6,8,10}
+		slice1 := make([]int, 3)		//Creates a new int array of length 3
+		copy(slice1, numbe)  			//this copies the values of the oll array into the new array.
+		fmt.Println(numbe, slice1)
+	*/
+
+	//Example9: Still on slicing and copying an array element into a new array,finding the sum of the new array, appenindind new elements into the new array:
+	array := []int{20, 40, 60, 80, 100}
+	array2 := make([]int, 4)
+	copy(array2, array)
+	array3 := append(array2, 100, 120, 140)
+	//finding the sum of the arry2
+	var sum int
+	for _, value := range array2 {
+		sum += value
+	}
+	fmt.Println(array, array2, "The sum of array2 is ", sum, array3)
+
+	//Example10:
 }
