@@ -45,13 +45,14 @@ func sum(array1 []float64) float64 {
 }
 
 //Function that determines an Odd and Even number
-func half(number int64) int64 {
-	if number%2 == 0 {
+func half(number *int64) int64 {
+	if *number%2 == 0 {
 		fmt.Println("Even number")
 		return 1
+	} else {
+		fmt.Println("Odd number")
+		return 0
 	}
-	fmt.Println("Odd number")
-	return 0
 }
 
 //Recurssion function: This is when a function calls itself inside itself repeatedly till its condition is met.
@@ -91,11 +92,11 @@ func main() {
 	*/
 
 	//Example4: Write a function which takes an integer and halves it and returns true if it was even or false if it was odd. For example half(1) should return (0, false) and half(2) should return (1, true)
-	/*	fmt.Println("Enter any Number: ")
-		var userInput int64
-		fmt.Scanf("%f", userInput)
-		(half(userInput))
-	*/
+	fmt.Println("Enter any Number: ")
+	var userInput int64
+	fmt.Scanf("%d", &userInput)
+	(half(&userInput))
+
 	//fmt.Println(half(120))
 
 	//Exaample5: Panic and Recover functions
@@ -119,6 +120,6 @@ func main() {
 	//	fmt.Println(factorial(5))
 
 	//Example8:Write a function with one variadic parameter that finds the greatest number in a list of numbers.
-	fmt.Println(smallestAndLargest(2, 4, 6, 8, 10, 12, 14, 16, 18, 20))
-
+	/*	fmt.Println(smallestAndLargest(2, 4, 6, 8, 10, 12, 14, 16, 18, 20))
+	 */
 }
