@@ -64,32 +64,28 @@ func factorial(number uint) uint {
 }
 
 func main() {
-	/*	x,y:=f()
-		fmt.Println(x,y)
+	x, y := f()
+	fmt.Println(x, y)
 
-		xs := []int{1,2,3,7,8,9,7}
-		fmt.Println(add(xs...))
-	*/
+	xs := []int{1, 2, 3, 7, 8, 9, 7}
+	fmt.Println(add(xs...))
 
 	//Example1: function inside function main (CLOSURE): i.e function calling a function.
-	/*		add := func(x, y int) int {
-				return x + y
-			}
-			fmt.Println(add(20,50))
-	*/
+	add := func(x, y int) int {
+		return x + y
+	}
+	fmt.Println(add(20, 50))
 
 	//Example2: Demonstrating DEFER, PANIC and RECOVER function keywords in Go, from the functions outside the main.
-	/*	defer second()
-		first()
-	*/
+	defer second()
+	first()
 
 	//Example3: sum is a function which takes a slice of numbers and adds them together. What would its function signature look like in GO?
-	/*	array1:=[]float64{20,30,40,50,60,23,43,56,67,89}
-		array2:= make([]float64, 5)
-		copy(array2, array1)
-		fmt.Println(array2)
-		fmt.Println(sum(array2))
-	*/
+	array1 := []float64{20, 30, 40, 50, 60, 23, 43, 56, 67, 89}
+	array2 := make([]float64, 5)
+	copy(array2, array1)
+	fmt.Println(array2)
+	fmt.Println(sum(array2))
 
 	//Example4: Write a function which takes an integer and halves it and returns true if it was even or false if it was odd. For example half(1) should return (0, false) and half(2) should return (1, true)
 	fmt.Println("Enter any Number: ")
@@ -102,24 +98,22 @@ func main() {
 	//Exaample5: Panic and Recover functions
 	//The call to Panic stops the execution of the next function recover()
 	//The recover  stops the panic and returns the value that was passed to call the panic.
-	/*	panic("STOP IT")
-		str:= recover()
-		fmt.Println(str)
-	*/
+	panic("STOP IT")
+	str := recover()
+	fmt.Println(str)
 
 	//Example6: Defer Panic and Recover:
 	// using the defer function allows
-	/*	defer func(){
-			str:= recover()
-			fmt.Println(str)
-		}()
-		panic("STOP IT")
-	*/
+	defer func() {
+		str := recover()
+		fmt.Println(str)
+	}()
+	panic("STOP IT")
 
 	//Example7: Recussive call. This is when a function calls itself inside itself repeatedly till its condition is met.
-	//	fmt.Println(factorial(5))
+	fmt.Println(factorial(5))
 
 	//Example8:Write a function with one variadic parameter that finds the greatest number in a list of numbers.
-	/*	fmt.Println(smallestAndLargest(2, 4, 6, 8, 10, 12, 14, 16, 18, 20))
-	 */
+	fmt.Println(smallestAndLargest(2, 4, 6, 8, 10, 12, 14, 16, 18, 20))
+
 }
