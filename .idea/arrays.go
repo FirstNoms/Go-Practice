@@ -56,21 +56,20 @@ func main() {
 	fmt.Printf("%.2f is the average of the array\n", averrage)
 
 	//Example6: Slicing an array.
-	/*	numbs = []float64{20, 34, 45, 56, 67, 77, 89, 98, 76, 32}
-		one := numbs[3:8]
-		fmt.Println(one)
-	*/
+	numbs = [10]float64{20, 34, 45, 56, 67, 77, 89, 98, 76, 32}
+	one := numbs[3:8]
+	fmt.Println(one)
 
-	//Example7: Slicing and apending an array
+	//Example7: Slicing and apending an array using the APPEND keyword.
 	nums := []float64{20, 34, 45, 56, 67, 77, 89, 98, 76, 32}
 	two := append(nums, 500, 100, 200)
 	fmt.Println(nums, two)
 
-	//Example8:Using the Slice function suing the MAKE keyword in an array:
-	numbe := []int{2, 4, 6, 8, 10}
+	//Example8:Using the Slice function using the MAKE keyword in an array:
+	number := []int{2, 4, 6, 8, 10}
 	slice1 := make([]int, 3) //Creates a new int array of length 3
-	copy(slice1, numbe)      //this copies the values of the oll array into the new array.
-	fmt.Println(numbe, slice1)
+	copy(slice1, number)     //this copies the values of the old array into the new array.
+	fmt.Println(number, slice1)
 
 	//Example9: Still on slicing and copying an array element into a new array,finding the sum of the new array, appenindind new elements into the new array:
 	array := []int{20, 40, 60, 80, 100}
