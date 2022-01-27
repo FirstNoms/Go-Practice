@@ -26,7 +26,7 @@ type Circle struct {
 // return math.Pi * oval.radius * oval.radius
 //}
 
-func (oval *Circle) area() float64 {
+func (oval *Circle) area() float64 { //This is a Method in Go.
 	return math.Pi * oval.radius * oval.radius
 }
 
@@ -37,6 +37,7 @@ func main() {
 
 	//Example2:
 	oval := &Circle{8.0, 6.9, 19.0}
+	//fmt.Println(oval.area())
 	fmt.Println(oval.area())
 
 }
