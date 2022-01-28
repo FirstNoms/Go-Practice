@@ -1,6 +1,6 @@
 package main
 
-//
+//This is the First Go Web Application example.
 import (
 	"fmt"
 	"net/http"
